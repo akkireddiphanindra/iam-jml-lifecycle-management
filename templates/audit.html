@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IAM JML Audit Log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f6f9;
+            color: #222;
+        }
+
+        h1 {
+            color: #17365d;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #17365d;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #075bbb;
+            text-decoration: none;
+        }
+
+        .note {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>IAM JML Audit Log</h1>
+
+    <p>Review employee lifecycle events and simulated access changes.</p>
+
+    <p><a href="/">Back to Employee Directory</a></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Employee</th>
+                <th>Action</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in audit_logs %}
+            <tr>
+                <td>{{ entry.timestamp }}</td>
+                <td>{{ entry.employee_name }}</td>
+                <td>{{ entry.action }}</td>
+                <td>{{ entry.details }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4">No audit events recorded yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p class="note">
+        Demo only. Access changes are simulated and do not modify real accounts.
+    </p>
+</body>
+</html>
