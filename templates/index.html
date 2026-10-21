@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IAM JML Lifecycle Management</title>
+</head>
+<body>
+    <h1>IAM JML Lifecycle Management</h1>
+    <p>Manage employee onboarding, department changes, and offboarding.</p>
+
+    <h2>Joiner — Add Employee</h2>
+    <form action="/joiner" method="POST">
+        <label>Employee Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Department:</label>
+        <select name="department" required>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+            <option value="Security">Security</option>
+        </select>
+
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <h2>Employee Directory</h2>
+    <p>The employee list will appear here when connected to the Flask application.</p>
+
+    <p><a href="/audit">View Audit Log</a></p>
+</body>
+</html>
