@@ -1,3 +1,15 @@
+```text
+██╗ █████╗ ███╗   ███╗
+██║██╔══██╗████╗ ████║
+██║███████║██╔████╔██║
+██║██╔══██║██║╚██╔╝██║
+██║██║  ██║██║ ╚═╝ ██║
+╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
+
+     J M L  L I F E C Y C L E
+
+JOINER • MOVER • LEAVER
+```
 # IAM Joiner–Mover–Leaver (JML) Lifecycle Management
 
 An Identity and Access Management (IAM) project demonstrating the employee identity lifecycle, including onboarding, job-role changes, access updates, and offboarding. It focuses on access provisioning and deprovisioning, role-based access control (RBAC), and secure identity lifecycle practices.
